@@ -1,0 +1,20 @@
+def pythagorean_theorem(a, b):
+    """
+    Calculates the length of the hypotenuse (c) of a right triangle
+    given the lengths of the other two sides (a and b) using Pythagorean theorem.
+    
+    Parameters:
+        a (float): Length of the first side.
+        b (float): Length of the second side.
+        
+    Returns:
+        float: Length of the hypotenuse (c).
+    """
+    c = (a ** 2 + b ** 2) ** 0.5
+    return c
+
+# Example usage:
+side_a = 3
+side_b = 4
+hypotenuse = pythagorean_theorem(side_a, side_b)
+print("The length of the hypotenuse is:", hypotenuse)
