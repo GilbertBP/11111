@@ -1,0 +1,22 @@
+import math
+
+# Угол в радианах
+angle = math.radians(45)
+
+# Вычисление синуса, косинуса и тангенса
+sin_result = math.sin(angle)
+cos_result = math.cos(angle)
+tan_result = math.tan(angle)
+
+# Вычисление арксинуса, арккосинуса и арктангенса
+asin_result = math.degrees(math.asin(sin_result))
+acos_result = math.degrees(math.acos(cos_result))
+atan_result = math.degrees(math.atan(tan_result))
+
+print(f"Угол: {math.degrees(angle)} градусов")
+print(f"Синус: {sin_result:.4f}")
+print(f"Косинус: {cos_result:.4f}")
+print(f"Тангенс: {tan_result:.4f}")
+print(f"Арксинус: {asin_result:.4f} градусов")
+print(f"Арккосинус: {acos_result:.4f} градусов")
+print(f"Арктангенс: {atan_result:.4f} градусов")
