@@ -16,9 +16,28 @@ def is_prime(number):
 
     return True
 
-# Пример использования функции
-num = int(input("Введите число для проверки: "))
-if is_prime(num):
-    print(num, "является простым числом.")
-else:
-    print(num, "не является простым числом.")
+def generate_primes(n):
+    primes = [True] * (n + 1)
+    primes[0] = primes[1] = False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if primes[i]:
+            for j in range(i * i, n + 1, i):
+                primes[j] = False
+    return [i for i in range(2, n + 1) if primes[i]]
+
+def is_prime_optimized(number):
+    if number <= 1:
+        return False
+
+    if number == 2:
+        return True
+
+    if number % 2 == 0:
+        return False
+
+    primes = generate_primes(int(math.sqrt(number)))
+    for prime in primes:
+        if number % prime == 0:
+            return False
+
+    return True
